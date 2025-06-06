@@ -1,0 +1,15 @@
+<header>
+    <div class="header__content" [ngClass]="{'header__content--notLogged': !(isLogged$ | async)}">
+        <div class="logoContainer">
+            <h1>Your Car Your Way - Chat POC</h1>
+        </div>
+
+        <div *ngIf="(isLogged$ | async) && user" class="nav">
+            <span class="userContainer">{{ user.firstName }} {{ user.lastName }}</span>
+            <button mat-raised-button type="button" (click)="logout()"  class="button button--logout">
+                Logout
+            </button>
+        </div>
+    </div>
+    <hr>
+</header>

@@ -1,0 +1,49 @@
+<app-header></app-header>
+<main>
+    <div class="chatContainer__content">
+
+            <div class="chatList">
+                <h2 class="subtitle">Conversations</h2>
+                <ul>
+                    <li>
+                        <a class="userChatLink" href="chat">
+                            <img class="userIcon" src="assets/default-icon-user.svg" alt="User Icon">User 2
+                        </a>
+
+                    </li>
+                    <li>
+                        <a class="userChatLink" href="chat">
+                            <img class="userIcon" src="assets/default-icon-user.svg" alt="User Icon">User 3
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="chatSpace">
+                <div class="messageContainer">
+                    <div class="message message--my">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                    <div class="message message--received">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" class="messageForm">
+                    <input formControlName="message" id="message">
+                    <button [ngClass]="{ 'button--disabled': form.invalid, ' button--primary': form.valid }"
+                        [disabled]="form.invalid" type="submit" class="button">
+                        Send
+                    </button>
+                </form>
+            </div>
+    </div>
+</main>
