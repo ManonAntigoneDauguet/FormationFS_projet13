@@ -1,0 +1,48 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.header__content {
+    position: relative;
+    height: 94px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include core-container;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+}
+
+button.button {
+    &--logout {
+        padding: 8px;
+        border-radius: 50px;
+
+        @include mobile-only {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+    }
+}
+
+.userContainer {
+    font-size: 20px;
+    color: $primary-color;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    color: $primary-color;
+}
