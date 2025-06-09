@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UnfoundComponent } from './feature/unfound/unfound.component';
 import { HomeComponent } from './feature/home/home.component';
 import { AuthGuard } from './guards/auth.guard';
-import { ChatContainerComponent } from './feature/chat/chat-container/chat-container.component';
+import { ChatContainerComponent } from './feature/chat/components/chat-container/chat-container.component';
 
 
 const routes: Routes = [

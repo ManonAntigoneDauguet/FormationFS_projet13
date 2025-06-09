@@ -16,7 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class UserController {
+public class UserAuthenticationController {
 
     private final UserService userService;
 
@@ -24,7 +24,7 @@ public class UserController {
 
     private final JwtService jwtService;
 
-    public UserController(UserService userService, AuthenticationManager authenticationManager, JwtService jwtService) {
+    public UserAuthenticationController(UserService userService, AuthenticationManager authenticationManager, JwtService jwtService) {
         this.userService = userService;
         this.authenticationManager = authenticationManager;
         this.jwtService = jwtService;

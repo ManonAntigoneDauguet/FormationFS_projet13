@@ -42,7 +42,7 @@ h2.subtitle {
     border: 1px solid black;
     display: block;
     padding: 8px 32px;
-    border-radius: 8px;
+    border-radius: $border-radius;
     cursor: pointer;
     font-size: 16px;
     text-wrap: nowrap;
@@ -99,8 +99,8 @@ h2.subtitle {
 .input {
     color: gray;
     box-sizing: border-box;
-    padding: 18px 16px;
-    border-radius: 8px;
+    padding: $padding;
+    border-radius: $border-radius;
     font-size: 16px;
 
     &--primary {
@@ -117,7 +117,7 @@ h2.subtitle {
 
     &-auth {
         font-size: 16px;
-        padding: 18px 16px;
+        padding: $padding;
     }
 
 }
