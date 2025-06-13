@@ -1,0 +1,28 @@
+<main>
+    <div class="chatContainer__content">
+
+        <div class="chatResume">
+            <h2 class="subtitle">Support Conversation</h2>
+        </div>
+
+        <div class="chatSpace">
+            <div class="messagesContainer" #messagesContainer>
+                <div class="messageContainer" *ngFor="let message of messages; index as i">
+                    <span [ngClass]="message?.authorId == user?.id ? 'timestamp--my' : 'timestamp--received'">{{convertSendTime(message.timestamp)}}</span>
+                    <div class="message"
+                        [ngClass]="message?.authorId == user?.id ? 'message--my' : 'message--received'">
+                        <p>{{message.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="messageForm">
+            <input formControlName="message" id="message" class="input">
+            <button [ngClass]="{ 'button--disabled': form.invalid, ' button--primary': form.valid }"
+                [disabled]="form.invalid" type="submit" class="button">
+                Send
+            </button>
+        </form>
+    </div>
+</main>

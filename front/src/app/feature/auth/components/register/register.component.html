@@ -1,0 +1,29 @@
+<div class="register__content">
+    <h1 class="title">Inscription</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="authForm">
+        <div class="coupleInputLabel">
+            <label for="firstName">First name</label>
+            <input class="input input--auth" matInput formControlName="firstName" id="firstName">
+        </div>
+
+        <div class="coupleInputLabel">
+            <label for="lastName">Last name</label>
+            <input class="input input--auth" matInput formControlName="lastName" id="lastName">
+        </div>
+
+        <div class="coupleInputLabel">
+            <label for="email">Email</label>
+            <input class="input input--auth" matInput formControlName="email" id="email">
+        </div>
+
+        <div class="coupleInputLabel">
+            <label for="password">Paswword</label>
+            <input class="input input--auth" matInput formControlName="password" id="password">
+        </div>
+
+        <button mat-raised-button type="submit" [disabled]="form.invalid" class="button button--primary">
+            Register
+        </button>
+    </form>
+    <span *ngIf="isError" class="formErrorMessage">{{errorMessage}}</span>
+</div>
