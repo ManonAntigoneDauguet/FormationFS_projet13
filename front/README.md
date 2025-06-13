@@ -15,4 +15,3 @@ Go to the "front" folder.
 `npm run start` allows you to launch the front-end.   
 
 The server run on the port 4200.  
-You can now test the feature on the web site [Your Car Your Way - Chat POC](http://localhost:4200).

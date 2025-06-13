@@ -3,7 +3,7 @@
 
 .header__content {
     position: relative;
-    height: 94px;
+    height: $headerHeight;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

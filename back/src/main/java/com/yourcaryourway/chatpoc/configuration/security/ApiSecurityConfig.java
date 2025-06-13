@@ -8,7 +8,7 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Allows to test the routes in the SWAGGER documentation
+ * Allows us to test the routes in the SWAGGER documentation
  */
 @Configuration
 @OpenAPIDefinition(

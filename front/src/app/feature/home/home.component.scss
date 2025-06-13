@@ -22,11 +22,9 @@
 
   img {
     height: 238px;
-    width: 421px;
 
     @include mobile-only {
       height: 130px;
-      width: 225px;
     }
   }
 }

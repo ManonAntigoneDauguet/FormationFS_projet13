@@ -16,15 +16,17 @@ This project uses Java Spring Boot and Angular technologies.
 
 This project need a MySQL database.  
 To install the project, you have to add environmental variables in your configuration :
-- DATABASE_USERNAME as your database username
-- DATABASE_PASSWORD as your database password
+- `DATABASE_USERNAME` as your database username
+- `DATABASE_PASSWORD` as your database password
+- `JWT_KEY` as the key used to encode the JWT token. It must be sufficiently long.  
+  (example : `ThisIsASecretKeyThatIsAtLeast32BytesLong1545135951695622156622`)
 
 Go to the "poc-back" folder.  
 
 - `mvn clean install` allows you to install the project.  
 - `mvn spring-boot:run` allows you to launch the back-end. The main method is SpringBootSecurityJwtApplication.
 
-The server run on the port 8080.
+The server run on the port 3004.
 
 ## 2 - Front Installation
 
