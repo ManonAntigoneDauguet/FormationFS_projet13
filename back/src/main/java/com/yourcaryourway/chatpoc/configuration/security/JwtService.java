@@ -60,16 +60,6 @@ public class JwtService {
     }
 
     /**
-     * Creates a token with the connected user's information
-     *
-     * @param email as String
-     * @return String
-     */
-    public String generateToken(String email) {
-        return buildToken(email);
-    }
-
-    /**
      * Creates a token
      *
      * @param email as String
